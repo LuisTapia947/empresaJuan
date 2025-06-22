@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KamiTeku</title>
+    <link rel="stylesheet" href="/css/StyleIndex.css">
+    <script src="/js/jsIndex.js" defer></script>
+
+</head>
+
+<body>
+    <!-- === HEADER === -->
+    <header class="header">
+        <div class="container-opciones">
+            <div class="logoContainer">
+                <img src="/source/image.png" alt="Logo" class="logo">
+            </div>
+            <span class="menu-icon">Menu</span>
+            <nav class="navigator">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#acerca">Acerca de nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- === MAIN === -->
+    <main class="main">
+
+        <!-- === VIDEO SECTION === -->
+        <section id="inicio" class="video-container">
+            <video autoplay muted loop id="video-fondo">
+                <source src="/source/WhatsApp Video 2025-06-22 at 10.10.11 AM.mp4" type="video/mp4">
+                Tu navegador no soporta video en HTML5.
+            </video>
+            <div class="contenido">
+                <h1>El poder supremo de lo digital</h1>
+                <p>Bienvenidos a KamiTeku, una comunidad donde la estética japonesa, el mundo gamer y la tecnología se
+                    fusionan para llevar tu experiencia digital al siguiente nivel.</p>
+            </div>
+        </section>
+
+        <!-- === PRESENTATION SECTION === -->
+        <section id="acerca" class="presentation">
+            <div class="texto">
+                <h1>¿Quiénes somos?</h1>
+                <p>KamiTeku (カミテク) es una comunidad digital única que fusiona la estética japonesa, la cultura gamer y
+                    la innovación tecnológica para ofrecer una experiencia de alto nivel.</p>
+                <p>Nos especializamos en servicios y productos pensados para creadores, entusiastas del gaming y amantes
+                    del diseño digital.</p>
+                <p>En KamiTeku no solo vendemos, construimos comunidad y conectamos talento.</p>
+                <h2>Qué ofrecemos</h2>
+                <ul>
+                    <li>🎮 Accesorios gamers: productos de calidad para llevar tu experiencia de juego al siguiente
+                        nivel.</li>
+                    <li>🛠️ Soporte técnico especializado: soluciones rápidas, efectivas y seguras para tus
+                        dispositivos.</li>
+                    <li>🔐 Licencias originales: software legal y confiable, sin riesgos.</li>
+                    <li>🌐 Desarrollo web: páginas modernas, personalizadas y adaptadas a tu estilo.</li>
+                    <li>🎭 PNG-Tubers y avatares 3D: identidad visual única para streamers y creadores de contenido.
+                    </li>
+                    <li>📱 Apps premium: herramientas exclusivas para mejorar tu productividad y entretenimiento.</li>
+                </ul>
+            </div>
+            <img src="/source/quienes-somos.png" alt="Imagen presentación">
+        </section>
+        <section id="servicios" class="presentation">
+            <div class="servicios">
+                <div class="tarjeta-servicio">
+                    <img src="/source/icono-gamer.png" alt="Accesorios Gamer">
+                    <h3>Accesorios Gamer</h3>
+                    <p>Productos de alta calidad para potenciar tu experiencia de juego y estilo personal.</p>
+                </div>
+
+                <div class="tarjeta-servicio">
+                    <img src="/source/icono-tecnico.png" alt="Soporte Técnico">
+                    <h3>Soporte Técnico</h3>
+                    <p>Soluciones rápidas y seguras para tus dispositivos y software.</p>
+                </div>
+
+                <div class="tarjeta-servicio">
+                    <img src="/source/icono-licencia.png" alt="Licencias Originales">
+                    <h3>Licencias Originales</h3>
+                    <p>Adquiere software legal, actualizado y seguro para tu trabajo y entretenimiento.</p>
+                </div>
+
+                <div class="tarjeta-servicio">
+                    <img src="/source/icono-web.png" alt="Desarrollo Web">
+                    <h3>Desarrollo Web</h3>
+                    <p>Sitios modernos y personalizados que reflejan tu estilo e impulsan tu marca.</p>
+                </div>
+
+                <div class="tarjeta-servicio">
+                    <img src="/source/icono-pngtuber.png" alt="PNG-Tubers y Avatares 3D">
+                    <h3>PNG-Tubers y Avatares 3D</h3>
+                    <p>Diseños visuales únicos para streamers y creadores de contenido.</p>
+                </div>
+
+                <div class="tarjeta-servicio">
+                    <img src="/source/icono-apps.png" alt="Apps Premium">
+                    <h3>Apps Premium</h3>
+                    <p>Herramientas exclusivas para productividad, gestión y entretenimiento digital.</p>
+                </div>
+            </div>
+        </section>
+        <!-- === CONTACT FORM === -->
+         <div class="fondoContacto">
+        <section id="contacto" class="contacto">
+            <h2>Te contactamos</h2>
+            <form class="formulario">
+                <div class="fila">
+                    <select required>
+                        <option value="">Selecciona tu país</option>
+                        <option value="co">Colombia</option>
+                        <option value="mx">México</option>
+                        <option value="ar">Argentina</option>
+                        <option value="cl">Chile</option>
+                        <option value="es">España</option>
+                    </select>
+                    <input type="tel" placeholder="Número de teléfono *" required>
+                </div>
+                <div class="fila">
+                    <input type="text" placeholder="Nombre completo *" required>
+                    <input type="email" placeholder="Correo electrónico *" required>
+                </div>
+                <div class="fila">
+                    <textarea placeholder="Adjunta tu mensaje *" required></textarea>
+                </div>
+                <div class="fila botones">
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                    <button type="reset" class="btn-limpiar">Limpiar</button>
+                </div>
+            </form>
+        </section>
+</div>
+    </main>
+
+    <!-- === FOOTER === -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 KamiTeku - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
