@@ -6,9 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>KamiTeku</title>
-    <link rel="stylesheet" href="css/StyleIndex.css">
-    <script src="js/jsIndex.js" defer></script>
 
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/estyleIndexV.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/country-select-js@2.0.1/build/css/countrySelect.min.css">
+
+    <!-- Scripts -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/country-select-js@2.0.1/build/js/countrySelect.min.js"></script>
+    <script src="js/jsIndex.js" defer></script>
 </head>
 
 <body>
@@ -16,7 +23,7 @@
     <header class="header">
         <div class="container-opciones">
             <div class="logoContainer">
-                <img src="source/image.png" alt="Logo" class="logo">
+                <img src="/source/image.png" alt="Logo" class="logo">
             </div>
             <span class="menu-icon">Menu</span>
             <nav class="navigator">
@@ -50,95 +57,96 @@
         <section id="acerca" class="presentation">
             <div class="texto">
                 <h1>¿Quiénes somos?</h1>
-                <p>KamiTeku (カミテク) es una comunidad digital única que fusiona la estética japonesa, la cultura gamer y
-                    la innovación tecnológica para ofrecer una experiencia de alto nivel.</p>
-                <p>Nos especializamos en servicios y productos pensados para creadores, entusiastas del gaming y amantes
-                    del diseño digital.</p>
-                <p>En KamiTeku no solo vendemos, construimos comunidad y conectamos talento.</p>
-                <h2>Qué ofrecemos</h2>
-                <ul>
-                    <li>🎮 Accesorios gamers: productos de calidad para llevar tu experiencia de juego al siguiente
-                        nivel.</li>
-                    <li>🛠️ Soporte técnico especializado: soluciones rápidas, efectivas y seguras para tus
-                        dispositivos.</li>
-                    <li>🔐 Licencias originales: software legal y confiable, sin riesgos.</li>
-                    <li>🌐 Desarrollo web: páginas modernas, personalizadas y adaptadas a tu estilo.</li>
-                    <li>🎭 PNG-Tubers y avatares 3D: identidad visual única para streamers y creadores de contenido.
-                    </li>
-                    <li>📱 Apps premium: herramientas exclusivas para mejorar tu productividad y entretenimiento.</li>
-                </ul>
+                <p><strong>KamiTeku</strong> (カミテク) es una comunidad digital que combina cultura japonesa, tecnología y
+                    el mundo
+                    gamer para llevar tu identidad digital al siguiente nivel.</p>
+                <p>Conectamos talento, creamos experiencias únicas y potenciamos tu presencia online.</p>
+                <h2>Impulsa tu estilo en el universo digital</h2>
             </div>
-            <img src="/source/quienes-somos.png" alt="Imagen presentación">
+            <img src="source/representacion-de-la-experiencia-del-usuario-y-diseno-de-la-interfaz.jpg"
+                alt="Equipo creativo trabajando" style="width: 100px;height: 400px;">
         </section>
+
+        <!-- === servicios SECTION === -->
         <section id="servicios" class="presentation">
             <div class="servicios">
                 <div class="tarjeta-servicio">
-                    <img src="/source/icono-gamer.png" alt="Accesorios Gamer">
+                    <img src="/source/TargetaServicio1.jpeg" alt="Accesorios Gamer">
                     <h3>Accesorios Gamer</h3>
                     <p>Productos de alta calidad para potenciar tu experiencia de juego y estilo personal.</p>
                 </div>
 
                 <div class="tarjeta-servicio">
-                    <img src="/source/icono-tecnico.png" alt="Soporte Técnico">
+                    <img src="/source/TargetaServicio2.jpeg" alt="Soporte Técnico">
                     <h3>Soporte Técnico</h3>
                     <p>Soluciones rápidas y seguras para tus dispositivos y software.</p>
                 </div>
 
                 <div class="tarjeta-servicio">
-                    <img src="/source/icono-licencia.png" alt="Licencias Originales">
+                    <img src="/source/TargetaServicio3.jpeg" alt="Licencias Originales">
                     <h3>Licencias Originales</h3>
                     <p>Adquiere software legal, actualizado y seguro para tu trabajo y entretenimiento.</p>
                 </div>
 
                 <div class="tarjeta-servicio">
-                    <img src="/source/icono-web.png" alt="Desarrollo Web">
+                    <img src="/source/TargetaServicio4 (1).jpeg" alt="Desarrollo Web">
                     <h3>Desarrollo Web</h3>
                     <p>Sitios modernos y personalizados que reflejan tu estilo e impulsan tu marca.</p>
                 </div>
 
                 <div class="tarjeta-servicio">
-                    <img src="/source/icono-pngtuber.png" alt="PNG-Tubers y Avatares 3D">
+                    <img src="/source/TargetaServicio6.jpeg" alt="PNG-Tubers y Avatares 3D">
                     <h3>PNG-Tubers y Avatares 3D</h3>
                     <p>Diseños visuales únicos para streamers y creadores de contenido.</p>
                 </div>
 
                 <div class="tarjeta-servicio">
-                    <img src="/source/icono-apps.png" alt="Apps Premium">
+                    <img src="/source/TargetaServicio5.jpeg" alt="Apps Premium">
                     <h3>Apps Premium</h3>
                     <p>Herramientas exclusivas para productividad, gestión y entretenimiento digital.</p>
                 </div>
             </div>
         </section>
+
         <!-- === CONTACT FORM === -->
-         <div class="fondoContacto">
-        <section id="contacto" class="contacto">
-            <h2>Te contactamos</h2>
-            <form class="formulario">
-                <div class="fila">
-                    <select required>
-                        <option value="">Selecciona tu país</option>
-                        <option value="co">Colombia</option>
-                        <option value="mx">México</option>
-                        <option value="ar">Argentina</option>
-                        <option value="cl">Chile</option>
-                        <option value="es">España</option>
-                    </select>
-                    <input type="tel" placeholder="Número de teléfono *" required>
-                </div>
-                <div class="fila">
-                    <input type="text" placeholder="Nombre completo *" required>
-                    <input type="email" placeholder="Correo electrónico *" required>
-                </div>
-                <div class="fila">
-                    <textarea placeholder="Adjunta tu mensaje *" required></textarea>
-                </div>
-                <div class="fila botones">
-                    <button type="submit" class="btn-enviar">Enviar</button>
-                    <button type="reset" class="btn-limpiar">Limpiar</button>
-                </div>
-            </form>
-        </section>
-</div>
+        <div class="fondoContacto">
+            <section id="contacto" class="contacto">
+                <h2>Te contactamos</h2>
+                <form class="formulario" id="formulario-contacto">
+                    <div class="fila">
+                        <input type="text" id="pais" name="pais" placeholder="Selecciona tu país *" required>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono *" required>
+                    </div>
+                    <div class="fila">
+                        <span class="error-msg" id="error-telefono"></span>
+                    </div>
+
+                    <div class="fila">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo *" required>
+                        <input type="email" id="correo" name="correo" placeholder="Correo electrónico *" required>
+                    </div>
+                    <div class="fila">
+                        <span class="error-msg" id="error-nombre"></span>
+                        <span class="error-msg" id="error-correo"></span>
+                    </div>
+
+                    <div class="fila">
+                        <textarea id="mensaje" name="mensaje" placeholder="Adjunta tu mensaje *" required></textarea>
+                    </div>
+                    <div class="fila">
+                        <span class="error-msg" id="error-mensaje"></span>
+                    </div>
+
+                    <div class="fila botones">
+                        <button type="submit" class="btn-enviar">Enviar</button>
+                        <button type="reset" class="btn-limpiar">Limpiar</button>
+                    </div>
+                    <div id="spinner" class="oculto">Enviando...</div>
+                <div id="mensaje-exito" class="oculto">¡Mensaje enviado!</div>
+                </form>
+                
+            </section>
+        </div>
     </main>
 
     <!-- === FOOTER === -->
