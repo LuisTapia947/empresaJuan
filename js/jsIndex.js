@@ -1,3 +1,4 @@
+import emailjs from 'https://cdn.emailjs.com/dist/email.min.mjs';
 document.addEventListener("DOMContentLoaded", function () {
     emailjs.init("XpnFNAYwdCp7ltXIm");
 
@@ -55,7 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const data = { nombre, correo, telefono, pais: paisNombre, mensaje };
 
-        emailjs.send("service_7tiy8gg", "template_w7y1lga", data)
+        emailjs.send("service_7tiy8gg", "template_w7y1lga", data, "XpnFNAYwdCp7ltXIm")
+
             .then(() => {
                 form.reset();
                 alert("Mensaje enviado correctamente");
@@ -63,8 +65,8 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch((error) => {
                 console.error("EmailJS error:", error);
                 alert("Error al enviar el mensaje.");
-                });
-                
+            });
+
     });
 
     function mostrarError(campo, mensaje) {
