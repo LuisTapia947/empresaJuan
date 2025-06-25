@@ -1,31 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // === Validar jQuery y el plugin countrySelect ===
-  if (typeof $ === "undefined" || typeof $.fn.countrySelect !== "function") {
-    console.error("❌ jQuery o countrySelect no están disponibles.");
-    return;
+  let emailJsDisponible = false;
+
+  // === Verificar disponibilidad de EmailJS ===
+  if (typeof emailjs !== "undefined") {
+    try {
+      emailjs.init("XpnFNAYwdCp7ltXIm");
+      emailJsDisponible = true;
+      console.log("✅ EmailJS inicializado correctamente.");
+    } catch (error) {
+      console.error("❌ Error al inicializar EmailJS:", error);
+    }
+  } else {
+    console.warn("⚠️ EmailJS no está definido.");
   }
 
+  // === Verificar e inicializar countrySelect ===
   const $paisInput = $("#pais");
   if ($paisInput.length === 0) {
     console.error("❌ No se encontró el input con id='pais'.");
     return;
   }
 
-  // === Inicializar EmailJS de forma segura ===
-  let emailJsDisponible = false;
-  try {
-    if (typeof emailjs !== "undefined") {
-      emailjs.init("XpnFNAYwdCp7ltXIm");
-      emailJsDisponible = true;
-      console.log("✅ EmailJS inicializado correctamente.");
-    } else {
-      console.warn("⚠️ EmailJS no está definido.");
-    }
-  } catch (error) {
-    console.error("❌ Error al inicializar EmailJS:", error);
-  }
-
-  // === Inicializar countrySelect ===
   $paisInput.countrySelect({
     preferredCountries: ["co", "mx", "es"],
     defaultCountry: "co"
@@ -45,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // === Validación y envío del formulario ===
   const form = document.getElementById("formulario-contacto");
-
   if (!form) {
     console.warn("⚠️ No se encontró el formulario con id='formulario-contacto'");
     return;
@@ -105,12 +99,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!valido) return;
 
-    const data = { nombre, correo, telefono, pais: paisNombre, mensaje };
-
     if (!emailJsDisponible) {
       alert("No se puede enviar el mensaje: EmailJS no está disponible.");
       return;
     }
+
+    const data = { nombre, correo, telefono, pais: paisNombre, mensaje };
 
     try {
       document.getElementById("spinner").classList.remove("oculto");
@@ -156,4 +150,3 @@ document.addEventListener("DOMContentLoaded", function () {
     return mapa[nombrePais] || "";
   }
 });
-
