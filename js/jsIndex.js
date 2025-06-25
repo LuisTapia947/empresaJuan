@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // === Validar que jQuery y el plugin countrySelect estén disponibles ===
+  // === Validar jQuery y el plugin countrySelect ===
   if (typeof $ === "undefined" || typeof $.fn.countrySelect !== "function") {
     console.error("❌ jQuery o countrySelect no están disponibles.");
     return;
@@ -11,33 +11,37 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  // === Inicializar EmailJS ===
-  if (typeof emailjs !== "undefined") {
-  emailjs.init("XpnFNAYwdCp7ltXIm");
-} else {
-  console.warn("⚠️ EmailJS no está definido.");
-}
-
+  // === Inicializar EmailJS de forma segura ===
+  let emailJsDisponible = false;
+  try {
+    if (typeof emailjs !== "undefined") {
+      emailjs.init("XpnFNAYwdCp7ltXIm");
+      emailJsDisponible = true;
+      console.log("✅ EmailJS inicializado correctamente.");
+    } else {
+      console.warn("⚠️ EmailJS no está definido.");
+    }
+  } catch (error) {
+    console.error("❌ Error al inicializar EmailJS:", error);
+  }
 
   // === Inicializar countrySelect ===
   $paisInput.countrySelect({
     preferredCountries: ["co", "mx", "es"],
-    defaultCountry: "co",
-    responsiveDropdown: true
+    defaultCountry: "co"
   });
 
   console.log("✅ countrySelect cargado correctamente.");
 
-  // === Menú hamburguesa (responsive) ===
+  // === Menú hamburguesa ===
   const menu_button = document.querySelector(".menu-icon");
-const menu = document.querySelector(".navigator ul");
+  const menu = document.querySelector(".navigator ul");
 
-if (menu_button && menu) {
-  menu_button.addEventListener("click", () => {
-    menu.classList.toggle("show");
-  });
-}
-
+  if (menu_button && menu) {
+    menu_button.addEventListener("click", () => {
+      menu.classList.toggle("show");
+    });
+  }
 
   // === Validación y envío del formulario ===
   const form = document.getElementById("formulario-contacto");
@@ -71,19 +75,16 @@ if (menu_button && menu) {
 
     let valido = true;
 
-    // Validación de nombre
     if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test(nombre)) {
       mostrarError("nombre", "El nombre solo debe contener letras.");
       valido = false;
     }
 
-    // Validación de correo
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) {
       mostrarError("correo", "El correo electrónico no es válido.");
       valido = false;
     }
 
-    // Validación de teléfono por país
     const regexTelefonos = {
       CO: /^[0-9]{10}$/,
       MX: /^[0-9]{10}$/,
@@ -97,7 +98,6 @@ if (menu_button && menu) {
       valido = false;
     }
 
-    // Validación de mensaje
     if (mensaje.length < 10) {
       mostrarError("mensaje", "El mensaje debe tener al menos 10 caracteres.");
       valido = false;
@@ -106,6 +106,11 @@ if (menu_button && menu) {
     if (!valido) return;
 
     const data = { nombre, correo, telefono, pais: paisNombre, mensaje };
+
+    if (!emailJsDisponible) {
+      alert("No se puede enviar el mensaje: EmailJS no está disponible.");
+      return;
+    }
 
     try {
       document.getElementById("spinner").classList.remove("oculto");
@@ -151,3 +156,4 @@ if (menu_button && menu) {
     return mapa[nombrePais] || "";
   }
 });
+
