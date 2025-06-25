@@ -1,0 +1,39 @@
+/* === VIDEO SECTION === */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 70px;
+}
+
+#video-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.contenido {
+  padding: 2rem;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.contenido h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #14d8ef;
+  text-shadow: 0 0 10px rgba(20, 216, 239, 0.4);
+}
+
+/* === MAIN === */
+.main {
+  padding: 0;
+  margin: 0;
+}

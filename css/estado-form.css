@@ -1,0 +1,24 @@
+/* === ESTADOS === */
+.oculto {
+  display: none;
+}
+
+#error-telefono,
+#error-correo,
+#error-nombre,
+#error-mensaje {
+  color: red;
+  font-size: 0.9rem;
+}
+
+#spinner {
+  color: #14d8ef;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+#mensaje-exito {
+  color: #14ef72;
+  font-weight: bold;
+  margin-top: 1rem;
+}

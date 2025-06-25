@@ -1,0 +1,96 @@
+/* === CONTACT FORM === */
+.fondoContacto {
+  background-color: #0a2731;
+  padding: 4rem 1rem;
+}
+
+.contacto {
+  background-color: #0d2b4e;
+  padding: 3.5rem 2rem;
+  color: #e0f7ff;
+  max-width: 900px;
+  margin: 5rem auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(20, 216, 239, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.contacto h2 {
+  margin-bottom: 1.8rem;
+  font-size: 2.2rem;
+  color: #14d8ef;
+  text-align: center;
+  text-shadow: 0 0 6px rgba(20, 216, 239, 0.3);
+}
+
+.formulario .fila {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+  overflow: visible;
+}
+
+.formulario input,
+.formulario textarea {
+  flex: 1;
+  min-width: 280px;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #088474;
+  background-color: #0a182b;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  border-color: #14d8ef;
+  outline: none;
+  box-shadow: 0 0 6px rgba(20, 216, 239, 0.4);
+}
+
+.formulario textarea {
+  width: 100%;
+  resize: none;
+  min-height: 140px;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-enviar {
+  background-color: #14d8ef;
+  color: #000;
+  border: none;
+  padding: 0.9rem 2.2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.btn-enviar:hover {
+  background-color: #088474;
+  transform: scale(1.03);
+}
+
+.btn-limpiar {
+  background-color: #543c7c;
+  color: white;
+  border: none;
+  padding: 0.9rem 2.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-limpiar:hover {
+  background-color: #484ad9;
+}

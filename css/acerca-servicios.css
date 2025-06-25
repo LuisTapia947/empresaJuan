@@ -1,0 +1,85 @@
+/* === PRESENTATION SECTION === */
+.presentation {
+  padding: 4rem 2rem;
+  background-color: #0d2b4e;
+  color: #e0eaff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.presentation .texto {
+  flex: 1;
+  min-width: 300px;
+  margin-top: 2.5rem;
+}
+
+.presentation img {
+  flex: 1;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.presentation h1,
+.presentation h2 {
+  color: #14d8ef;
+  text-align: left;
+}
+
+.presentation p,
+.presentation li {
+  text-align: left;
+  margin-bottom: 0.8rem;
+}
+
+/* === SERVICES SECTION === */
+.servicios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
+  background-color: #0a182b;
+  padding: 4rem 2rem;
+}
+
+.tarjeta-servicio {
+  background-color: #0d2b4e;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(20, 216, 239, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta-servicio:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(20, 216, 239, 0.3);
+}
+
+.tarjeta-servicio img {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+  border-radius: 12px;
+  background-color: #040608;
+  padding: 0.5rem;
+  box-shadow: 0 0 8px rgba(20, 216, 239, 0.15);
+}
+
+.tarjeta-servicio h3 {
+  color: #14d8ef;
+  margin-bottom: 0.5rem;
+}
+
+.tarjeta-servicio p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #d1ecff;
+}

@@ -1,0 +1,23 @@
+/* === RESET === */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* === GLOBAL === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #d9f6ff;
+  font-size: 1.2rem;
+  background-color: #0a182b;
+}
+
+.container {
+  width: 85%;
+  max-width: 850px;
+  margin: 0 auto;
+}

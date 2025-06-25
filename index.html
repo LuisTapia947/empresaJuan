@@ -2,20 +2,24 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>KamiTeku</title>
 
-    <!-- Estilos -->
-    <link rel="stylesheet" href="css/estyleIndexV.css">
+    <!-- === Estilos principales divididos === -->
+    <link rel="stylesheet" href="css/estyleGlobal.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/acerca-servicios.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/plugin-country.css">
+    <link rel="stylesheet" href="css/estado-form.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- === Plugin de selección de país === -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/country-select-js@2.0.1/build/css/countrySelect.min.css">
-
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/country-select-js@2.0.1/build/js/countrySelect.min.js"></script>
-    <script type="module" src="js/jsIndex.js"></script>
-
 </head>
 
 <body>
@@ -25,9 +29,10 @@
             <div class="logoContainer">
                 <img src="source/image.png" alt="Logo" class="logo">
             </div>
-            <span class="menu-icon">Menu</span>
+
             <nav class="navigator">
-                <ul>
+                <span class="menu-icon">&#9776;</span>
+                <ul class="menu-list">
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#acerca">Acerca de nosotros</a></li>
                     <li><a href="#servicios">Servicios</a></li>
@@ -37,10 +42,8 @@
         </div>
     </header>
 
-    <!-- === MAIN === -->
     <main class="main">
-
-        <!-- === VIDEO SECTION === -->
+        <!-- VIDEO -->
         <section id="inicio" class="video-container">
             <video autoplay muted loop id="video-fondo">
                 <source src="source/WhatsApp Video 2025-06-22 at 10.10.11 AM.mp4" type="video/mp4">
@@ -53,13 +56,12 @@
             </div>
         </section>
 
-        <!-- === PRESENTATION SECTION === -->
+        <!-- ACERCA -->
         <section id="acerca" class="presentation">
             <div class="texto">
                 <h1>¿Quiénes somos?</h1>
                 <p><strong>KamiTeku</strong> (カミテク) es una comunidad digital que combina cultura japonesa, tecnología y
-                    el mundo
-                    gamer para llevar tu identidad digital al siguiente nivel.</p>
+                    el mundo gamer para llevar tu identidad digital al siguiente nivel.</p>
                 <p>Conectamos talento, creamos experiencias únicas y potenciamos tu presencia online.</p>
                 <h2>Impulsa tu estilo en el universo digital</h2>
             </div>
@@ -67,9 +69,10 @@
                 alt="Equipo creativo trabajando" style="width: 100px;height: 400px;">
         </section>
 
-        <!-- === servicios SECTION === -->
+        <!-- SERVICIOS -->
         <section id="servicios" class="presentation">
             <div class="servicios">
+                <!-- tarjetas de servicio -->
                 <div class="tarjeta-servicio">
                     <img src="source/TargetaServicio1.jpeg" alt="Accesorios Gamer">
                     <h3>Accesorios Gamer</h3>
@@ -108,13 +111,13 @@
             </div>
         </section>
 
-        <!-- === CONTACT FORM === -->
+        <!-- CONTACTO -->
         <div class="fondoContacto">
             <section id="contacto" class="contacto">
                 <h2>Te contactamos</h2>
                 <form class="formulario" id="formulario-contacto">
                     <div class="fila">
-                        <input type="text" id="pais" name="pais" required>
+                        <input type="text" id="pais" name="pais" />
                         <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono *" required>
                     </div>
 
@@ -126,6 +129,7 @@
                         <input type="text" id="nombre" name="nombre" placeholder="Nombre completo *" required>
                         <input type="email" id="correo" name="correo" placeholder="Correo electrónico *" required>
                     </div>
+
                     <div class="fila">
                         <span class="error-msg" id="error-nombre"></span>
                         <span class="error-msg" id="error-correo"></span>
@@ -134,6 +138,7 @@
                     <div class="fila">
                         <textarea id="mensaje" name="mensaje" placeholder="Adjunta tu mensaje *" required></textarea>
                     </div>
+
                     <div class="fila">
                         <span class="error-msg" id="error-mensaje"></span>
                     </div>
@@ -142,20 +147,26 @@
                         <button type="submit" class="btn-enviar">Enviar</button>
                         <button type="reset" class="btn-limpiar">Limpiar</button>
                     </div>
+
                     <div id="spinner" class="oculto">Enviando...</div>
                     <div id="mensaje-exito" class="oculto">¡Mensaje enviado!</div>
                 </form>
-
             </section>
         </div>
     </main>
 
-    <!-- === FOOTER === -->
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <p>&copy; 2025 KamiTeku - Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!-- === Scripts al final para asegurar que DOM esté listo === -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/country-select-js@2.0.1/build/js/countrySelect.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.11.0/dist/email.min.js"></script>
+    <script src="js/jsIndex.js"></script>
 </body>
 
 </html>

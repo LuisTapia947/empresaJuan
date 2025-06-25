@@ -1,0 +1,77 @@
+/* === CONTENEDOR PRINCIPAL DEL PLUGIN === */
+.country-select {
+  position: relative !important;
+  width: 100% !important;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+
+}
+
+/* === INPUT DEL PLUGIN === */
+.country-select input[type="text"] {
+  width: 100% !important;
+  padding: 10px 12px 10px 46px;
+  border: 1px solid #14d8ef !important;
+  background-color: #0d2b4e !important;
+  color: #ffffff !important;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 16px;
+  height: 3rem !important;
+  
+}
+
+
+/* === LISTA DESPLEGABLE DE PAÍSES ===  */
+.country-select .country-list {
+  background-color: #0a182b !important;
+  color: #ffffff !important;
+  border: 2px solid #14d8ef !important;
+  position: absolute !important;
+  z-index: 9999 !important;
+  max-height: 250px;
+  width: 900px !important;
+  box-sizing: border-box;
+  left: 0;
+  top: calc(100% + 4px);
+  box-shadow: 0 4px 12px rgba(20, 216, 239, 0.25);
+  border-radius: 6px;
+}
+
+
+@media screen and (max-width: 767px) {
+  .country-select .country-list {
+    width: 510px !important;
+    
+  }
+}
+
+/* === ITEMS DE LA LISTA === */
+.country-select .country-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* === HOVER / ITEM SELECCIONADO === */
+.country-select .country-list li:hover,
+.country-select .country-list .highlight {
+  background-color: #14d8ef !important;
+  color: black !important;
+}
+
+/* === NOMBRE DE PAÍS === */
+.country-select .country-name {
+  color: #ffffff !important;
+}
+
+/* === ASEGURAR VISIBILIDAD DEL DESPLEGABLE === */
+form,
+.formulario,
+.contacto,
+.fondoContacto {
+  overflow: visible !important;
+  position: relative !important;
+ 
+}

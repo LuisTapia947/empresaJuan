@@ -1,0 +1,62 @@
+/* === HEADER === */
+.header {
+  height: 70px;
+  background-color: #040608;
+  color: #14d8ef;
+  padding: 0.8rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(20, 216, 239, 0.2);
+}
+
+.container-opciones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  display: block;
+}
+
+.menu-icon {
+  display: none;
+  font-weight: bold;
+  color: #14d8ef;
+  cursor: pointer;
+}
+
+/* === NAVIGATION === */
+.navigator {
+  width: 100%;
+  text-align: center;
+}
+
+.navigator ul {
+  background-color: #030303;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 1rem;
+}
+
+.navigator ul li a {
+  color: #14d8ef;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+}
+
+.navigator ul li a:hover {
+  background-color: #088474;
+  color: #fff;
+  border-radius: 6px;
+}
